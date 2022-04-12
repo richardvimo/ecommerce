@@ -65,10 +65,16 @@ img {
     transition: background-color .3s ease-out;
     text-align: center;
     border: none;
+    width: 100%;
 }
 .btn:hover {
     background-color: #769c02;
     cursor: pointer;
+}
+@media (min-width: 768px) {
+   .btn {
+       width: auto;
+   }
 }
 
 
@@ -76,9 +82,12 @@ img {
 .text-center {
     text-align: center;
 }
-.max-width-30 {
-    width: 30rem;
+@media (min-width: 768px) {
+    .max-width-30 {
+        width: 30rem;
+    }
 }
+
 
 /**-------------------------------- Header y Navegacion ------------------------------**/
 h1 span {
@@ -369,10 +378,12 @@ h1 span {
 
 
 /*--------------------------- Blog -------------------------*/
-.contenedor-blog {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    column-gap: 4rem;
+@media (min-width: 768px) {
+    .contenedor-blog {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 4rem;
+    }
 }
 
 .entrada {
@@ -380,12 +391,26 @@ h1 span {
     padding-bottom: 4rem;
     margin-bottom: 2rem;
 }
+.entrada h2 {
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+   .entrada h2 {
+       text-align: left;
+   }
+}
 .entrada:last-of-type {
     border: none;
 }
-.entrada-meta {
-    display: flex;
-    justify-content: space-between;
+@media (min-width: 768px) {
+    .entrada-meta {
+        display: flex;
+        justify-content: space-between;
+    }   
+}
+.contenido-blog {
+    padding: 2rem;
 }
 .entrada-meta p {
     font-weight: 700; /*la fuente 700 es equivalente a bold*/
@@ -393,6 +418,23 @@ h1 span {
 .entrada-meta span {
     color: #037bc0;
 }
+
+aside h3{
+    text-align: center;
+}
+aside ul li{
+    list-style: none;
+    text-align: center;
+}
+@media (min-width: 768px) {
+    aside ul li{
+        text-align: left;
+    }
+    aside h3{
+        text-align: left;
+    }
+}
+
 
 
 /*-------------------------- Entrada Blog ---------------------*/
@@ -409,8 +451,13 @@ h1 span {
     padding: 0;
 
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /*3 columnas con un mismo ancho 1fr*/
+    grid-template-columns: repeat(2, 1fr); /*3 columnas con un mismo ancho 1fr*/
     gap: 2rem;
+}
+@media (min-width: 768px) {
+   .galeria {
+    grid-template-columns: repeat(3, 1fr);
+   }
 }
 .galeria img {
     width: 40rem;
@@ -449,6 +496,7 @@ h1 span {
     flex: 1;
     padding: .5rem;
     border: 1px solid #e1e1e1;
+    width: 100%;
 }
 :focus {
     outline: none;
